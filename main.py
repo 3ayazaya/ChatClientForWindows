@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from getpass import getpass
 import vk_api
 import json
 from vk_api.longpoll import VkLongPoll, VkEventType
@@ -16,7 +17,7 @@ def main():
     with open('config.json', 'r', encoding='utf-8') as cfg:
         config = json.load(cfg)
 
-    login, password = config['login'], config['password']
+    login, password = input('Login: '), getpass('Password: ')
     vk_session = vk_api.VkApi(login, password, captcha_handler=captcha_handler)
 
     try:
