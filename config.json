@@ -1,5 +1,5 @@
 {
-  "login": "",
-  "password": "",
-  "message": ""
+  "login": "your_login@mail.ru",
+  "password": "your_password",
+  "message": "Hello World"
 }
